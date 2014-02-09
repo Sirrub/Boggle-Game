@@ -1,0 +1,5 @@
+This program is written in Java and designed using the jGrasp IDE.
+
+It uses a depth-first search to find any words in a given
+lexicon that appear within the Boggle board.
+Points are then calculated based on the size of the word.
