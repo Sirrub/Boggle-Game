@@ -157,18 +157,9 @@
     */	
       public void reportResults() 
       {
-      // You must fill this in, but you can only add to the println arguments
-      // in the following lines.
-      
          System.out.println("Number of user words: " + userCount);
          Collections.sort(userwords);
-        // numCount = 0;
-        // for (int i = 0; i < userwords.size(); i++)
-        // {
-          //  numCount++;
-          //  System.out.println(userwords.get(i)
-          //     + " - " + numCount);
-         //}
+
          System.out.println("User score: " + getScore(userwords));
          System.out.println("Number of machine words: " + machineCount);
          Collections.sort(machinewords);
@@ -263,7 +254,7 @@
       {
          BoggleBoard board = new BoggleBoard(BoggleBoard.SAMPLE_BOARD);
          BoggleDictionary dictionary = new BoggleDictionary(BoggleDictionary.UNIX);
-         //Boggle boggle = new Boggle();
+        
          Boggle boggle = new Boggle(board, dictionary);
          boggle.play();
       }	
