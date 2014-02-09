@@ -11,8 +11,8 @@
    import java.io.*;
    import java.util.*;
 
-   public class BoggleDictionary implements Iterable<String> {
-   
+   public class BoggleDictionary implements Iterable<String> 
+   {
    // Filenames of default word lists
       public static final String CSW  = "CSW12.txt";
       public static final String OWL  = "OWL.txt";
@@ -23,9 +23,7 @@
       public TreeSet<String> dictionary = new TreeSet<String>(String.CASE_INSENSITIVE_ORDER);
       Iterator<String> itr;
       
-   // You must choose an appropriate type for the dictionary field.
-   // You can't leave this field typed as 'Object.'
-    
+  
       private TreeSet<String> addToTree(File file) throws FileNotFoundException
       { 
          Scanner scan = new Scanner(fileName);
@@ -70,7 +68,6 @@
     */   
       public boolean contains(String str) 
       {
-      // You must fill this in as appropriate and change the return value.
          return dictionary.contains(str);
       }
       
@@ -78,8 +75,8 @@
    /**************************************************************************
     * Is the string a prefix of some word in the dictionary?
     */   
-      public boolean containsAsPrefix(String str) {
-      // You must fill this in as appropriate and change the return value.
+      public boolean containsAsPrefix(String str) 
+      {
          String prefix = dictionary.ceiling(str);
          if (prefix == null)
          {
@@ -97,7 +94,8 @@
     * Create an iterator over all the words in the dictionary.
     * No specific word order is guaranteed.
     */   
-      public Iterator<String> iterator() {
+      public Iterator<String> iterator() 
+      {
          Iterator<String> itr = dictionary.iterator();
          return itr;
       }
